@@ -1,7 +1,9 @@
-The OpenArrayContent class is a dependency of the OpenArray class  ( package:  @writetome51/open-array ).
+The OpenArrayItemInserter class is a dependency of the OpenArray class
+( package:  @writetome51/open-array ).
 
-OpenArrayContent has many of the basic properties and methods you need to understand the array's contents, 
-such as:
+OpenArrayItemInserter has methods that increase the length of the array.
+The methods are:
 
-length, isEmpty, notEmpty, has(value), hasAll(values), hasAny(values), startsWith(values),
-endsWith(values), matches(array),  ...and a few more.
+.at(index, values)
+
+.middle(values, offset = 0)

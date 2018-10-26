@@ -27,3 +27,4 @@ insert.middle(values, offset = 0)
 By default, if the array has odd number of items, values will be inserted just before the
 middle item. If you want to change the insert position, set the optional offset parameter to +
 or - whatever integer you want.
+

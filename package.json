@@ -1,14 +1,15 @@
 {
-  "name": "@writetome51/open-array-item-inserter",
-  "version": "1.0.1",
+  "name": "@writetome51/public-array-item-inserter",
+  "version": "1.0.2",
   "description": "an array-manipulating typescript/javascript class with methods that increase the length of the array",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/open-array-item-inserter.git"
+    "url": "git+https://github.com/writetome51/public-array-item-inserter.git"
   },
   "keywords": [
     "array",
@@ -19,14 +20,15 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/open-array-item-inserter/issues"
+    "url": "https://github.com/writetome51/public-array-item-inserter/issues"
   },
-  "homepage": "https://github.com/writetome51/open-array-item-inserter#readme",
+  "homepage": "https://github.com/writetome51/public-array-item-inserter#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "latest"
+    "@writetome51/arrays-match": "latest",
+    "typescript": "^3.0.1"
   },
   "dependencies": {
-    "@writetome51/open-array-container": "latest",
+    "@writetome51/public-array-container": "latest",
     "@writetome51/array-insert-at": "latest",
     "@writetome51/array-insert-middle": "latest"
   }

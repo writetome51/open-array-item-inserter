@@ -1,20 +1,20 @@
 import { insertAt } from '@writetome51/array-insert-at/insertAt';
 import { insertMiddle } from '@writetome51/array-insert-middle/insertMiddle';
-import { OpenArrayContainer } from '@writetome51/open-array-container/OpenArrayContainer';
+import { PublicArrayContainer } from '@writetome51/public-array-container';
 
 
-// This class' methods only increase the length of the array, and return the class instance.
-
-export class OpenArrayItemInserter extends OpenArrayContainer {
+export class PublicArrayItemInserter extends PublicArrayContainer {
 
 
-	constructor(data = []) {
+	constructor(data: any[] = []) {
 		super(data);
 	}
 
 
-	// index can be negative or positive.
+	// These methods only increase the length of the array, and return the class instance.
 
+
+	// index can be negative or positive.
 	at(index, values: any[]): this {
 		return this.returnThis_after(insertAt(index, values, this.data));
 	}

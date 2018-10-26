@@ -1,8 +1,8 @@
-import { OpenArrayItemInserter } from './OpenArrayItemInserter';
-import { arraysMatch } from '@writetome51/arrays-match/arraysMatch';
+import { PublicArrayItemInserter } from './index';
+import { arraysMatch } from '@writetome51/arrays-match';
 
 
-let insert = new OpenArrayItemInserter([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let insert = new PublicArrayItemInserter([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 let otherArr = insert.data;
 
 // Test 1

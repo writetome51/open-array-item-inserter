@@ -1,15 +1,19 @@
-The OpenArrayItemInserter class is a dependency of the OpenArray class
-( package:  @writetome51/open-array ).
+To include in your project:
+
+import {PublicArrayItemInserter} from '@writetome51/public-array-item-inserter';
+
+The PublicArrayItemInserter class is a dependency of the PublicArray class
+( package:  @writetome51/public-array ).
 
 To instantiate, pass the actual array it will contain into its constructor:
 
-let inserter = new OpenArrayItemInserter( [item1, item2, item3,...] );
+let inserter = new PublicArrayItemInserter( [item1, item2, item3,...] );
 
 You can also reset the array by accessing the class 'data' property:
 
 filter.data = [1,2,3,4,...];
 
-OpenArrayItemInserter has methods that increase the length of the array.
+PublicArrayItemInserter has methods that increase the length of the array.
 
 This inserts values at index:
 

@@ -1,30 +1,27 @@
 To include in your project:
 
-import {PublicArrayItemInserter} from '@writetome51/public-array-item-inserter';
+    import {PublicArrayInserter} from '@writetome51/public-array-inserter';
 
-The PublicArrayItemInserter class is a dependency of the PublicArray class
-( package:  @writetome51/public-array ).
+PublicArrayInserter has methods that increase the length of the array,  
+and return the class instance.
 
 To instantiate, pass the actual array it will contain into its constructor:
 
-let insert = new PublicArrayItemInserter( [item1, item2, item3,...] );
+    let insert = new PublicArrayInserter( [item1, item2, item3,...] );
 
 You can also reset the array by accessing the class 'data' property:
 
-insert.data = [1,2,3,4,...];
+    insert.data = [1,2,3,4,...];
 
-PublicArrayItemInserter has methods that increase the length of the array.
+All the methods:
 
-This inserts values at index:
+    // inserts values at index
+    at(index, values): this // index can be negative or positive.
 
-insert.at(index, values) // index can be negative or positive.
 
-
-This inserts values in middle of the array:
-
-insert.middle(values, offset = 0)
-
-By default, if the array has odd number of items, values will be inserted just before the
-middle item. If you want to change the insert position, set the optional offset parameter to +
-or - whatever integer you want.
+    // inserts values in middle of the array
+    middle(values, offset = 0): this
+    // By default, if the array has odd number of items, values will be inserted just before the
+    // middle item. If you want to change the insert position, set the optional offset parameter to +
+    // or - whatever integer you want.
 

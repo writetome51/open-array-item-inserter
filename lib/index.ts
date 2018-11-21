@@ -1,5 +1,5 @@
-import { insertAt } from '@writetome51/array-insert-at/insertAt';
-import { insertMiddle } from '@writetome51/array-insert-middle/insertMiddle';
+import { insertAt } from '@writetome51/array-insert-at';
+import { insertMiddle } from '@writetome51/array-insert-middle';
 import { PublicArrayContainer } from '@writetome51/public-array-container';
 
 

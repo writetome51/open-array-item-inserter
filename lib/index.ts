@@ -3,7 +3,7 @@ import { insertMiddle } from '@writetome51/array-insert-middle/insertMiddle';
 import { PublicArrayContainer } from '@writetome51/public-array-container';
 
 
-export class PublicArrayItemInserter extends PublicArrayContainer {
+export class PublicArrayInserter extends PublicArrayContainer {
 
 
 	constructor(data: any[] = []) {

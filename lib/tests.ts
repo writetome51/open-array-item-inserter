@@ -7,7 +7,7 @@ let otherArr = insert.data;
 
 // Test 1
 insert.at(-3, [30, 32]);
-if (arraysMatch(insert.data, [1, 2, 3, 4, 5, 6, 30, 32, 7, 8, 9])) console.log('test 1 passed');
+if (arraysMatch(insert.data, [1, 2, 3, 4, 5, 6, 7, 30, 32, 8, 9])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
 
 
@@ -18,7 +18,7 @@ else console.log('test 2 FAILED');
 
 // Test 3
 insert.at(0, [30, 32]);
-if (arraysMatch(insert.data, [30, 32, 1, 2, 3, 4, 5, 6, 30, 32, 7, 8, 9])) console.log('test 3 passed');
+if (arraysMatch(insert.data, [30, 32, 1, 2, 3, 4, 5, 6, 7, 30, 32, 8, 9])) console.log('test 3 passed');
 else console.log('test 3 FAILED');
 
 
@@ -28,8 +28,10 @@ else console.log('test 4 FAILED');
 
 
 // Test 5
+insert.data = [1, 2, 3, 4, 5, 6];
+otherArr = insert.data;
 insert.middle(['in', 'the', 'middle']);
-if (arraysMatch(insert.data, [30, 32, 1, 2, 3, 4, 'in', 'the', 'middle', 5, 6, 30, 32, 7, 8, 9]))
+if (arraysMatch(insert.data, [1, 2, 3, 'in', 'the', 'middle', 4, 5, 6]))
 	console.log('test 5 passed');
 else console.log('test 5 FAILED');
 
@@ -41,7 +43,7 @@ else console.log('test 6 FAILED');
 
 // Test 7
 insert.middle(['another'], -2);
-if (arraysMatch(insert.data, [30, 32, 1, 2, 3, 4, 'another', 'in', 'the', 'middle', 5, 6, 30, 32, 7, 8, 9]))
+if (arraysMatch(insert.data, [1, 2,'another', 3, 'in', 'the', 'middle', 4, 5, 6]))
 	console.log('test 7 passed');
 else console.log('test 7 FAILED');
 
@@ -53,7 +55,7 @@ else console.log('test 8 FAILED');
 
 // Test 9
 insert.middle([]);
-if (arraysMatch(insert.data, [30, 32, 1, 2, 3, 4, 'another', 'in', 'the', 'middle', 5, 6, 30, 32, 7, 8, 9]))
+if (arraysMatch(insert.data, [1, 2,'another', 3, 'in', 'the', 'middle', 4, 5, 6]))
 	console.log('test 9 passed');
 else console.log('test 9 FAILED');
 
@@ -65,7 +67,7 @@ else console.log('test 10 FAILED');
 
 // Test 11
 let errorTriggered = false;
-try{
+try {
 	insert.middle(1);
 }
 catch (e) {
@@ -77,7 +79,7 @@ else console.log('test 11 FAILED');
 
 // Test 12
 errorTriggered = false;
-try{
+try {
 	insert.at(20, [30, 32]);
 }
 catch (e) {

@@ -15,13 +15,19 @@ You can also reset the array by accessing the class 'data' property:
 
 All the methods:
 
-    // inserts values at index
-    at(index, values): this // index can be negative or positive.
+    
+    at(index, values): this 
+        // inserts values at index.  index can be negative or positive.
+        // If positive, existing items beginning at that index will be pushed to the right to   
+        // make room.  If negative, existing items ending at that index will be pushed to the   
+        // left to make room.  Either way, once the operation is done the new values will occupy  
+        // that specified index. 
 
 
-    // inserts values in middle of the array
+    
     middle(values, offset = 0): this
-    // By default, if the array has odd number of items, values will be inserted just before the
-    // middle item. If you want to change the insert position, set the optional offset parameter to +
-    // or - whatever integer you want.
+        // inserts values in middle of the array
+        // By default, if the array has odd number of items, values will be inserted just before the
+        // middle item. If you want to change the insert position, set the optional offset parameter to +
+        // or - whatever integer you want.
 

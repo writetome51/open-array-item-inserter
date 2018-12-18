@@ -16,7 +16,7 @@ export class PublicArrayInserter extends PublicArrayContainer {
 
 	// index can be negative or positive.
 	at(index, values: any[]): this {
-		return this.returnThis_after(insertAt(index, values, this.data));
+		return this._returnThis_after(insertAt(index, values, this.data));
 	}
 
 
@@ -25,7 +25,7 @@ export class PublicArrayInserter extends PublicArrayContainer {
 	// or - whatever integer you want.
 
 	middle(values: any[], offset = 0): this {
-		return this.returnThis_after(insertMiddle(values, this.data, offset));
+		return this._returnThis_after(insertMiddle(values, this.data, offset));
 	}
 
 

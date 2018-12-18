@@ -6,9 +6,13 @@ let insert = new PublicArrayInserter([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 let otherArr = insert.data;
 
 // Test 1
-insert.at(-3, [30, 32]);
+let instance = insert.at(-3, [30, 32]);
 if (arraysMatch(insert.data, [1, 2, 3, 4, 5, 6, 7, 30, 32, 8, 9])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
+
+// Test 1A:
+if (instance.className && instance.className === 'PublicArrayInserter') console.log('test 1A passed');
+else console.log('test 1A FAILED');
 
 
 // Test 2

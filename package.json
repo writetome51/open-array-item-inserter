@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/public-array-inserter",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "an array-manipulating typescript/javascript class with methods that increase the length of the array",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

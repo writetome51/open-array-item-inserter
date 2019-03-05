@@ -14,7 +14,10 @@ export class PublicArrayInserter extends PublicArrayContainer {
 	// These methods only increase the length of the array, and return the class instance.
 
 
-	// index can be negative or positive.
+	// index can be negative or positive.  If positive, existing items beginning at
+	// that index will be pushed to the right to make room.  If negative, existing
+	// items ending at that index will be pushed to the left to make room.
+
 	at(index, values: any[]): this {
 		return this._returnThis_after(insertAt(index, values, this.data));
 	}

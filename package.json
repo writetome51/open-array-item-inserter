@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/public-array-inserter",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "an array-manipulating typescript/javascript class with methods that increase the length of the array",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,12 +27,11 @@
   },
   "homepage": "https://github.com/writetome51/public-array-inserter#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "~1.0.3",
-    "typescript": "^3.0.1"
+    "@writetome51/arrays-match": "~1.0.5"
   },
   "dependencies": {
-    "@writetome51/public-array-container": "~2.0.1",
-    "@writetome51/array-insert-at": "~2.0.0",
-    "@writetome51/array-insert-middle": "~1.0.3"
+    "@writetome51/public-array-container": "~2.0.2",
+    "@writetome51/array-insert-at": "~2.0.2",
+    "@writetome51/array-insert-middle": "~1.0.4"
   }
 }

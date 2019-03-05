@@ -5,7 +5,7 @@ var __extends = (this && this.__extends) || (function () {
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -23,7 +23,9 @@ var PublicArrayInserter = /** @class */ (function (_super) {
         return _super.call(this, data) || this;
     }
     // These methods only increase the length of the array, and return the class instance.
-    // index can be negative or positive.
+    // index can be negative or positive.  If positive, existing items beginning at
+    // that index will be pushed to the right to make room.  If negative, existing
+    // items ending at that index will be pushed to the left to make room.
     PublicArrayInserter.prototype.at = function (index, values) {
         return this._returnThis_after(array_insert_at_1.insertAt(index, values, this.data));
     };

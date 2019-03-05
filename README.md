@@ -3,40 +3,22 @@
 An array-manipulating Typescript/Javascript class with methods that   
 increase the length of the array.
 
-## Installation
-
-You must have npm installed first.  Then, in the command line:
-
-```bash
-npm install @writetome51/public-array-inserter
+## Constructor
+```
+constructor(data? = [])  // 'data' becomes the array the class manipulates.
 ```
 
-## Loading
-
-    // if using Typescript:
-    import {PublicArrayInserter} from '@writetome51/public-array-inserter';
-    // if using ES5 Javascript:
-    var PublicArrayInserter = 
-            require('@writetome51/public-array-inserter').PublicArrayInserter;
-
-
-## Instantiation
-
-    let insert = new PublicArrayInserter( [item1, item2, item3,...] );
-    // Or, instantiate with an empty array:
-    let insert = new PublicArrayInserter();
-
 You can also reset the array by accessing the class `.data` property:
-
-    insert.data = [1,2,3,4,...];
-
+```
+this.data = [1,2,3,4];
+```
 
 ## Properties
+```
+data : any[]  // the actual array
 
-    data : any[] (read-writable) // the actual array
-
-    className: string (read-only)
-
+className: string (read-only)
+```
 
 ## Methods
 ``` 
@@ -46,13 +28,16 @@ at(index, values): this
     // the right to make room.  If negative, existing items ending at that 
     // index will be pushed to the left to make room.
     
-middle(values, offset = 0): this
-    // inserts values in middle of the array.
+middle(values, offset? = 0): this
+    // inserts values in middle of this.data .
     // By default, if the array has odd number of items, values will be 
     // inserted just before the middle item. If you want to change the insert 
     // position, set the optional offset parameter to + or - whatever integer 
     // you want.
-
+```
+The methods below are not important to know about in order to use this  
+class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .
+```
 protected   _createGetterAndOrSetterForEach(
 		propertyNames: string[],
 		configuration: IGetterSetterConfiguration
@@ -95,6 +80,22 @@ protected   _runMethod_and_returnThis(
 ## Inheritance Chain
 
 PublicArrayInserter<--[PublicArrayContainer](https://github.com/writetome51/public-array-container#publicarraycontainer)<--[BaseClass](https://github.com/writetome51/typescript-base-class#baseclass)
+
+## Installation
+
+You must have npm installed first.  Then, in the command line:
+
+```bash
+npm install @writetome51/public-array-inserter
+```
+
+## Loading
+
+    // if using Typescript:
+    import {PublicArrayInserter} from '@writetome51/public-array-inserter';
+    // if using ES5 Javascript:
+    var PublicArrayInserter = 
+            require('@writetome51/public-array-inserter').PublicArrayInserter;
 
 
 ## License

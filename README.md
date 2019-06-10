@@ -4,24 +4,27 @@ An array-manipulating Typescript/Javascript class with methods that
 increase the length of the array.
 
 ## Constructor
-```
-constructor(data? = [])  // 'data' becomes the array the class manipulates.
+```ts
+constructor(data? = [])   // 'data' is assigned to this.data .
 ```
 
-You can also reset the array by accessing the class `.data` property:
-```
+You can reset the array by accessing the class `.data` property:
+```ts
 this.data = [1,2,3,4];
 ```
 
 ## Properties
-```
+```ts
 data : any[]  // the actual array
 
 className: string (read-only)
 ```
 
 ## Methods
-``` 
+<details>
+<summary>view methods</summary>
+
+```ts
 at(index, values): this 
     // inserts values at index.  index can be negative or positive.
     // If positive, existing items beginning at that index will be pushed to 
@@ -37,7 +40,7 @@ middle(values, offset? = 0): this
 ```
 The methods below are not important to know about in order to use this  
 class.  They're inherited from [BaseClass](https://github.com/writetome51/typescript-base-class#baseclass) .
-```
+```ts
 protected   _createGetterAndOrSetterForEach(
 		propertyNames: string[],
 		configuration: IGetterSetterConfiguration
@@ -69,13 +72,14 @@ protected   _returnThis_after(voidExpression: any) : this
     // voidExpression is executed, then function returns this.
     // Even if voidExpression returns something, the returned data isn't used.
 
-protected   _runMethod_and_returnThis(
-    callingObject, 
-    method: Function, 
-    methodArgs: any[], 
-    additionalAction?: Function // takes the result returned by method as an argument.
-) : this
+protected   _errorIfPropertyHasNoValue(
+                property: string, // can contain dot-notation, i.e., 'property.subproperty'
+                propertyNameInError? = ''
+            ) : void
+    // If value of this[property] is undefined or null, it triggers fatal error:
+    // `The property "${propertyNameInError}" has no value.`
 ```
+</details>
 
 ## Inheritance Chain
 
@@ -83,20 +87,18 @@ PublicArrayInserter<--[PublicArrayContainer](https://github.com/writetome51/publ
 
 ## Installation
 
-You must have npm installed first.  Then, in the command line:
-
 ```bash
-npm install @writetome51/public-array-inserter
+npm i  @writetome51/public-array-inserter
 ```
 
 ## Loading
-
-    // if using Typescript:
-    import {PublicArrayInserter} from '@writetome51/public-array-inserter';
-    // if using ES5 Javascript:
-    var PublicArrayInserter = 
-            require('@writetome51/public-array-inserter').PublicArrayInserter;
-
+```ts
+// if using Typescript:
+import {PublicArrayInserter} from '@writetome51/public-array-inserter';
+// if using ES5 Javascript:
+var PublicArrayInserter = 
+         require('@writetome51/public-array-inserter').PublicArrayInserter;
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

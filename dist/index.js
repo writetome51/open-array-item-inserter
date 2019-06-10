@@ -18,9 +18,8 @@ var array_insert_middle_1 = require("@writetome51/array-insert-middle");
 var public_array_container_1 = require("@writetome51/public-array-container");
 var PublicArrayInserter = /** @class */ (function (_super) {
     __extends(PublicArrayInserter, _super);
-    function PublicArrayInserter(data) {
-        if (data === void 0) { data = []; }
-        return _super.call(this, data) || this;
+    function PublicArrayInserter() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     // These methods only increase the length of the array, and return the class instance.
     // index can be negative or positive.  If positive, existing items beginning at

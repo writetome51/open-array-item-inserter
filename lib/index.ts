@@ -6,11 +6,6 @@ import { PublicArrayContainer } from '@writetome51/public-array-container';
 export class PublicArrayInserter extends PublicArrayContainer {
 
 
-	constructor(data: any[] = []) {
-		super(data);
-	}
-
-
 	// These methods only increase the length of the array, and return the class instance.
 
 
